@@ -165,12 +165,11 @@
 		]
 	});
 
-	////////////////////////////////////////////////////
-	// 08. slider__active Slider Js
+	
 	if (jQuery(".slider__active").length > 0) {
 		let sliderActive1 = ".slider__active";
 		let sliderInit1 = new Swiper(sliderActive1, {
-			// Optional parameters
+			
 			slidesPerView: 1,
 			slidesPerColumn: 1,
 			paginationClickable: true,
@@ -181,14 +180,13 @@
 				delay: 5000,
 			},
 
-			// If we need pagination
-			pagination: {
+		
 				el: ".main-slider-paginations",
-				// dynamicBullets: true,
+				
 				clickable: true,
 			},
 
-			// Navigation arrows
+		
 			navigation: {
 				nextEl: ".swiper-button-next",
 				prevEl: ".swiper-button-prev",
@@ -222,7 +220,7 @@
 				});
 			};
 			animated();
-			// Make animated when slide change
+		
 			init.on("slideChange", function () {
 				$(sliderActive1 + " [data-animation]").removeClass("animated");
 			});
@@ -278,7 +276,7 @@
 			  return '<span class="' + className + '">' + '<button>'+(index + 1)+'</button>' + "</span>";
 			},
 		},
-		// Navigation arrows
+	
 		navigation: {
 			nextEl: ".blog-slider-button-next-1",
 			prevEl: ".blog-slider-button-prev-1",
@@ -302,8 +300,7 @@
 		},
 	});
 
-	////////////////////////////////////////////////////
-	// 00. postbox__slider
+	
 	$('.postbox__slider').slick({
 		dots: false,
 		infinite: true,
@@ -315,8 +312,6 @@
 		nextArrow: '<button type="button" class="tp-slick-next"><i class="far fa-long-arrow-right"></i></button>',
 	});
 
-	////////////////////////////////////////////////////
-    // 09. Masonary Js
 	$('.grid').imagesLoaded( function() {
 		
 		var $grid = $(".grid").isotope({
